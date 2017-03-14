@@ -1,0 +1,154 @@
+/*------------------------------------------------------------------------------
+  GENERAL STYLES
+------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+
+:root {
+  --offwhite: #f8f8f8;
+  --maroon: #B3395C;
+  --purple: #181228;
+  --purple-transparent: rgba(24, 18, 40, 0.3);
+  --shadow: 1px 7px 50px rgba(0, 0, 0, 0.5);
+  --border: 1px solid rgba(255,255,255,0.7);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  background: radial-gradient(rgb(24, 18, 40), rgb(164, 69, 97));
+  height: 200vh;
+  width: 200vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*------------------------------------------------------------------------------
+  NAVIGATION
+------------------------------------------------------------------------------*/
+
+nav {
+  color: var(--offwhite);
+  position: fixed;
+  top: 0;
+  padding: 1.5rem 1rem 1rem;
+  width: 100%;
+  background: var(--purple-transparent);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li {
+  display: inline;
+}
+
+/*------------------------------------------------------------------------------
+  IMAGE CARD
+------------------------------------------------------------------------------*/
+
+.img-card {
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  height: 312px;
+  justify-content: space-between;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  width: 232px;
+  z-index: 0;
+}
+
+.img-card::before {
+  background-color: var(--maroon);
+  content: "";
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.img {
+  height: 145%;
+  left: -190px;
+  position: absolute;
+  top: -30px;
+  z-index: -2;
+}
+
+/*------------------------------------------------------------------------------
+  IMAGE CARD CONTENT
+------------------------------------------------------------------------------*/
+
+h1,
+p {
+  font-weight: 300;
+  position: relative;
+  color: white;
+}
+
+h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.headline {
+  border-bottom: var(--border);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+  width: 3rem;
+}
+
+.price,
+.details {
+  align-items: center;
+  border: var(--border);
+  display: flex;
+  justify-content: center;
+}
+
+.price {
+  border-radius: 50%;
+  height: 7rem;
+  font-size: 1.6rem;
+  letter-spacing: 1.7px;
+  width: 7rem;
+}
+
+
+.details {
+  border-radius: 20px;
+  padding: 0.2rem 0.7rem;
+}
+
+.details > p {
+  font-weight: 100;
+  font-size: 0.8rem;
+}
